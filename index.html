@@ -1,405 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CV-Yassine Hajjouji</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-        cursor: grab;
+<head>
+  <meta charset="UTF-8" />
+  <title>CV-Yassine Hajjouji</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      cursor: grab;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    body {
+      color: #ededed;
+      background-color: #081b29;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 10px;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      background-color: #081b29;
+      position: fixed;
+    }
+
+    .name {
+      position: relative;
+      font-size: 25px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 50px;
+      cursor: pointer;
+    }
+
+    .name i {
+      
+      filter: drop-shadow(0px 0px 20px);
+      margin: 15px 50px 0px 15px;
+    }
+
+    .name::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: ShowRight 1s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    .navbar a {
+      font-size: 18px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: 30px;
+      transition: 3s;
+      padding: 20px 0;
+    }
+
+    .navbar a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: ShowRight 1s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #00abf0;
+    }
+
+    .Profil {
+      height: 90vh;
+      background: url(../img/home.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    .about-box {
+      position: absolute;
+      top: 120px;
+      right: 40px;
+      left: 50px;
+      font-size: 20px;
+    }
+
+    .about-box p{
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    span {
+      color: #00aaff;
+    }
+
+    .about-box h2,
+    .about-Lange h2,
+    .about-code h2,
+    .about-permi h2 {
+      color: #00abf0;
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .about-box h2::before,
+    .about-Lange h2::before,
+    .about-code h2::before,
+    .about-permi h2::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: ShowRight 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .about-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: ShowRight 1s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    .about-Lange {
+      width: 80%;
+      margin: 30px auto;
+    }
+
+    .about-Lange h2 {
+      position: absolute;
+      top: 250px;
+      left: 50px;
+      color: #00aaff;
+    }
+
+    .skill-lange {
+      position: absolute;
+      top: 300px;
+      margin-bottom: 12px;
+      background: #00aaff;
+      border-radius: 10px;
+      position: relative;
+      height: 25px;
+      overflow: hidden;
+      border: #00aaff 1px solid;
+    }
+
+    .skill-lange::before {
+      content: attr(data-skill) " - " attr(data-level) "%";
+      position: absolute;
+      left: 450px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      font-size: 20px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .about-code {
+      width: 80%;
+      margin: 30px auto;
+    }
+
+    .about-code h2 {
+      position: absolute;
+      top: 440px;
+      left: 50px;
+      color: #00aaff;
+    }
+
+    .skill-code {
+      position: absolute;
+      top: 350px;
+      margin-bottom: 12px;
+      background: #00aaff;
+      border-radius: 10px;
+      position: relative;
+      height: 25px;
+      overflow: hidden;
+      border: #00aaff 1px solid;
+    }
+
+    .skill-code::before {
+      content: attr(data-skill) " - " attr(data-level) "%";
+      position: absolute;
+      left: 450px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      font-size: 20px;
+      color: white;
+      font-weight: 500;
+    }
+
+    .skill-fill {
+      height: 100%;
+      width: 0%;
+      background: #081b29;
+      border-radius: 10px;
+      transition: width 1.5s ease;
+    }
+
+    .about-permi {
+      width: 80%;
+      margin: 30px auto;
+    }
+
+    .about-permi h2 {
+      position: absolute;
+      top: 700px;
+      left: 50px;
+      color: #00aaff;
+    }
+
+    .A {
+      box-shadow: 0 0 10px #00aaff;
+      position: absolute;
+      top: 800px;
+      left: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 10px;
+      padding: 20px 60px;
+      font-size: 30px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .A1 {
+      box-shadow: 0 0 10px #00aaff;
+      position: absolute;
+      top: 800px;
+      left: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 10px;
+      padding: 20px 60px;
+      font-size: 30px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .B {
+      box-shadow: 0 0 10px #00aaff;
+      position: absolute;
+      top: 800px;
+      left: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 10px;
+      padding: 20px 60px;
+      font-size: 30px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .space {
+      margin-bottom: 600px;
+      color: #00aaff00;
+    }
+
+    @keyframes ShowRight {
+      100% {
+        width: 0;
       }
-      a {
-        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        margin-left: 10px;
+        font-size: 16px;
       }
 
-      body {
-        color: #ededed;
-        background-color: #081b29;
-      }
-
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px 10px;
-        background: transparent;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 100;
-        background-color: #081b29;
-        position: fixed;
-      }
-
-      .name {
+      .navbar {
         position: relative;
-        font-size: 25px;
-        color: #ededed;
-        text-decoration: none;
-        font-weight: 600;
-        margin-left: 50px;
-        cursor: pointer;
-      }
-
-      .name i {
-        color: #00abf0;
-        filter: drop-shadow(0px 0px 20px);
-        margin: 15px 50px 0px 15px;
-      }
-
-      .name::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: #081b29;
-        animation: ShowRight 1s ease forwards;
-        animation-delay: 0.2s;
-      }
-
-      .navbar a {
-        font-size: 18px;
-        color: #ededed;
-        text-decoration: none;
-        font-weight: 500;
-        margin-right: 30px;
-        transition: 3s;
-        padding: 20px 0;
-      }
-
-      .navbar a::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: #081b29;
-        animation: ShowRight 1s ease forwards;
-        animation-delay: 0.3s;
-      }
-
-      .navbar a:hover,
-      .navbar a.active {
-        color: #00abf0;
-      }
-      .Profil {
-        height: 90vh;
-        background: url(../img/home.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
         display: flex;
-        align-items: center;
-        padding: 0 10%;
+        justify-content: center;
       }
+    }
+  </style>
+  <header class="header">
+    <div class="name">
+      <h1><i class="bx bx-user-pin"></i></h1>
+    </div>
 
-      .about-box {
-        position: absolute;
-        top: 120px;
-        right: 40px;
-        left: 50px;
-        font-size: 20px;
-      }
+    <nav class="navbar">
+      <a href="https://hajjoujiyassine.github.io/Profile/">Profile</a>
+      <a href="#" class="active">About me</a>
+      <a href="#">projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-      .about-box h2,
-      .about-Lange h2,
-      .about-code h2,
-      .about-permi h2 {
-        color: #00abf0;
-        font-size: 40px;
-        font-weight: 800;
-      }
-
-      .about-box h2::before,
-      .about-Lange h2::before,
-      .about-code h2::before,
-      .about-permi h2::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: #081b29;
-        animation: ShowRight 1s ease forwards;
-        animation-delay: 0.5s;
-      }
-
-      .about-box::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: #081b29;
-        animation: ShowRight 1s ease forwards;
-        animation-delay: 1.2s;
-      }
-
-      .about-Lange {
-        width: 80%;
-        margin: 30px auto;
-      }
-
-      .about-Lange h2 {
-        position: absolute;
-        top: 250px;
-        left: 50px;
-        color: #00aaff;
-      }
-
-      .skill-lange {
-        position: absolute;
-        top: 300px;
-        margin-bottom: 12px;
-        background: #00aaff;
-        border-radius: 10px;
-        position: relative;
-        height: 25px;
-        overflow: hidden;
-        border: #00aaff 1px solid;
-      }
-
-      .skill-lange::before {
-        content: attr(data-skill) " - " attr(data-level) "%";
-        position: absolute;
-        left: 450px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        font-size: 20px;
-        color: white;
-        font-weight: 600;
-      }
-
-      .about-code {
-        width: 80%;
-        margin: 30px auto;
-      }
-
-      .about-code h2 {
-        position: absolute;
-        top: 440px;
-        left: 50px;
-        color: #00aaff;
-      }
-
-      .skill-code {
-        position: absolute;
-        top: 350px;
-        margin-bottom: 12px;
-        background: #00aaff;
-        border-radius: 10px;
-        position: relative;
-        height: 25px;
-        overflow: hidden;
-        border: #00aaff 1px solid;
-      }
-
-      .skill-code::before {
-        content: attr(data-skill) " - " attr(data-level) "%";
-        position: absolute;
-        left: 450px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        font-size: 20px;
-        color: white;
-        font-weight: 600;
-      }
-
-      .skill-fill {
-        height: 100%;
-        width: 0%;
-        background: #081b29;
-        border-radius: 10px;
-        transition: width 1.5s ease;
-      }
-
-      .about-permi {
-        width: 80%;
-        margin: 30px auto;
-      }
-
-      .about-permi h2 {
-        position: absolute;
-        top: 700px;
-        left: 50px;
-        color: #00aaff;
-      }
-
-      .A {
-        box-shadow: 0 0 10px #00aaff;
-        position: absolute;
-        top: 800px;
-        left: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 10px;
-        padding: 20px 60px;
-        font-size: 30px;
-        border-radius: 20px;
-        color: white;
-        font-weight: 700;
-      }
-
-      .A1 {
-        box-shadow: 0 0 10px #00aaff;
-        position: absolute;
-        top: 800px;
-        left: 500px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 10px;
-        padding: 20px 60px;
-        font-size: 30px;
-        border-radius: 20px;
-        color: white;
-        font-weight: 700;
-      }
-
-      .B {
-        box-shadow: 0 0 10px #00aaff;
-        position: absolute;
-        top: 800px;
-        left: 900px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 10px;
-        padding: 20px 60px;
-        font-size: 30px;
-        border-radius: 20px;
-        color: white;
-        font-weight: 700;
-      }
-
-      .space {
-        margin-bottom: 600px;
-        color: #00aaff00;
-      }
-
-      @keyframes ShowRight {
-        100% {
-          width: 0;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          margin-left: 10px;
-          font-size: 16px;
-        }
-
-        .navbar {
-          position: relative;
-          display: flex;
-          justify-content: center;
-        }
-      }
-    </style>
-    <header class="header">
-      <div class="name">
-        <h1><i class="bx bx-user-pin"></i></h1>
-      </div>
-
-      <nav class="navbar">
-        <a href="https://hajjoujiyassine.github.io/Profile/">Profile</a>
-        <a href="#" class="active">About me</a>
-        <a href="#">projects</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-
-    <section class="Aboutme_Content">
-      <div class="about-box">
-        <h2><i class="fa fa-address-card-o"></i>&ensp;About Me :</h2>
-        <p>
-          Passionate about development and always motivated to learn new <br />
-          technologies. Here's a quick overview of my skills and personal
-          information.
-        </p>
-      </div>
-
-      <section class="about-Lange">
-        <h2><i class="bx bxs-graduation"></i>&ensp;Langues :</h2>
-        <div class="skill-lange" data-skill="Arabe" data-level="100"></div>
-        <div class="skill-lange" data-skill="Français" data-level="75"></div>
-        <div class="skill-lange" data-skill="Anglais" data-level="70"></div>
-      </section>
-
-      <section class="about-code">
-        <h2><i class="bx bx-code-alt"></i>&ensp;Langages :</h2>
-        <div class="skill-code" data-skill="Langage C" data-level="90"></div>
-        <div class="skill-code" data-skill="HTML" data-level="90"></div>
-        <div class="skill-code" data-skill="CSS" data-level="85"></div>
-        <div class="skill-code" data-skill="JavaScript" data-level="65"></div>
-        <div class="skill-code" data-skill="GitHub" data-level="85"></div>
-      </section>
-
-      <section class="about-permi">
-        <h2><i class="bx bxs-id-card"></i>&ensp;Permis :</h2>
-        <p class="A"><i class="fa fa-motorcycle"></i>&ensp;A</p>
-        <p class="A1"><i class="fa fa-motorcycle"></i>&ensp;A1</p>
-        <p class="B"><i class="bx bxs-car"></i>&ensp;B</p>
-      </section>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const bars = document.querySelectorAll(".skill-lange");
-
-          bars.forEach((bar) => {
-            const level = bar.getAttribute("data-level");
-
-            const fill = document.createElement("div");
-            fill.classList.add("skill-fill");
-
-            bar.appendChild(fill);
-
-            setTimeout(() => {
-              fill.style.width = level + "%";
-            }, 300);
+  <section class="Aboutme_Content">
+    <div class="about-box">
+      <h2><i class="bx bxs-graduation"></i>&ensp;Training :</h2>
+      <p>
+        Computer Science student — FSSM University ( <span class="typing"></span>)
+      </p>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script>
+          var typing = new Typed(".typing", {
+            strings: ["In Progress."],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true,
           });
+        </script>
+    </div>
 
-          const bars1 = document.querySelectorAll(".skill-code");
-
-          bars1.forEach((bar1) => {
-            const level = bar1.getAttribute("data-level");
-
-            const fill = document.createElement("div");
-            fill.classList.add("skill-fill");
-
-            bar1.appendChild(fill);
-
-            setTimeout(() => {
-              fill.style.width = level + "%";
-            }, 300);
-          });
-        });
-      </script>
-
-      <div class="space">space</div>
+    <section class="about-Lange">
+      <h2><i class="fa fa-microphone"></i>&ensp;Langues :</h2>
+      <div class="skill-lange" data-skill="Arabe" data-level="100"></div>
+      <div class="skill-lange" data-skill="Français" data-level="75"></div>
+      <div class="skill-lange" data-skill="Anglais" data-level="70"></div>
     </section>
-  </body>
+
+    <section class="about-code">
+      <h2><i class="bx bx-code-alt"></i>&ensp;Langages :</h2>
+      <div class="skill-code" data-skill="Langage C" data-level="90"></div>
+      <div class="skill-code" data-skill="HTML" data-level="90"></div>
+      <div class="skill-code" data-skill="CSS" data-level="85"></div>
+      <div class="skill-code" data-skill="JavaScript" data-level="65"></div>
+      <div class="skill-code" data-skill="GitHub" data-level="85"></div>
+    </section>
+
+    <section class="about-permi">
+      <h2><i class="bx bxs-id-card"></i>&ensp;Permis :</h2>
+      <p class="A"><i class="fa fa-motorcycle"></i>&ensp;A</p>
+      <p class="A1"><i class="fa fa-motorcycle"></i>&ensp;A1</p>
+      <p class="B"><i class="bx bxs-car"></i>&ensp;B</p>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const bars = document.querySelectorAll(".skill-lange");
+
+        bars.forEach((bar) => {
+          const level = bar.getAttribute("data-level");
+
+          const fill = document.createElement("div");
+          fill.classList.add("skill-fill");
+
+          bar.appendChild(fill);
+
+          setTimeout(() => {
+            fill.style.width = level + "%";
+          }, 300);
+        });
+
+        const bars1 = document.querySelectorAll(".skill-code");
+
+        bars1.forEach((bar1) => {
+          const level = bar1.getAttribute("data-level");
+
+          const fill = document.createElement("div");
+          fill.classList.add("skill-fill");
+
+          bar1.appendChild(fill);
+
+          setTimeout(() => {
+            fill.style.width = level + "%";
+          }, 300);
+        });
+      });
+    </script>
+
+    <div class="space">space</div>
+  </section>
+</body>
+
 </html>
