@@ -60,7 +60,6 @@
       }
 
       .name i {
-        filter: drop-shadow(0px 0px 20px);
         margin: 15px 50px 0px 15px;
       }
 
@@ -77,13 +76,14 @@
       }
 
       .navbar a {
-        font-size: 18px;
-        color: #ededed;
+         font-size: 24px;
+        color: white;
         text-decoration: none;
         font-weight: 500;
-        margin-right: 30px;
+        margin-right: 60px;
+        margin-top: 10px;
         transition: 3s;
-        padding: 20px 0;
+        padding: 10px 0;
       }
 
       .navbar a::before {
@@ -141,7 +141,6 @@
         font-weight: 800;
       }
 
-      .about-box h2::before,
       .about-Lange h2::before,
       .about-code h2::before,
       .about-permi h2::before {
@@ -153,7 +152,7 @@
         height: 100%;
         background: #081b29;
         animation: ShowRight 1s ease forwards;
-        animation-delay: 0.5s;
+        animation-delay: 1s;
       }
 
       .about-box::before {
@@ -165,7 +164,7 @@
         height: 100%;
         background: #081b29;
         animation: ShowRight 1s ease forwards;
-        animation-delay: 1.2s;
+        animation-delay: .8s;
       }
 
       .about-Lange {
@@ -263,7 +262,7 @@
       .A {
         box-shadow: 0 0 10px #00aaff;
         position: absolute;
-        top: 800px;
+        top: 780px;
         left: 100px;
         display: flex;
         justify-content: space-between;
@@ -279,7 +278,7 @@
       .A1 {
         box-shadow: 0 0 10px #00aaff;
         position: absolute;
-        top: 800px;
+        top: 780px;
         left: 500px;
         display: flex;
         justify-content: space-between;
@@ -295,7 +294,7 @@
       .B {
         box-shadow: 0 0 10px #00aaff;
         position: absolute;
-        top: 800px;
+        top: 780px;
         left: 900px;
         display: flex;
         justify-content: space-between;
@@ -309,7 +308,7 @@
       }
 
       .space {
-        margin-bottom: 600px;
+        margin-bottom: 520px;
         color: #00aaff00;
       }
 
@@ -319,18 +318,6 @@
         }
       }
 
-      @media (max-width: 768px) {
-        .logo {
-          margin-left: 10px;
-          font-size: 16px;
-        }
-
-        .navbar {
-          position: relative;
-          display: flex;
-          justify-content: center;
-        }
-      }
     </style>
     <header class="header">
       <div class="name">
@@ -348,7 +335,7 @@
       <div class="about-box">
         <h2><i class="bx bxs-graduation"></i>&ensp;Training :</h2>
         <p>
-          Computer Science student — FSSM University (
+          - Computer Science student — FSSM University (
           <span class="typing"></span>)
         </p>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
@@ -364,8 +351,8 @@
 
       <section class="about-Lange">
         <h2><i class="fa fa-microphone"></i>&ensp;Langues :</h2>
-        <div class="skill-lange" data-skill="Arabe" data-level="100"></div>
         <div class="skill-lange" data-skill="Français" data-level="75"></div>
+        <div class="skill-lange" data-skill="Arabe" data-level="95"></div>
         <div class="skill-lange" data-skill="Anglais" data-level="70"></div>
       </section>
 
@@ -399,7 +386,7 @@
 
             setTimeout(() => {
               fill.style.width = level + "%";
-            }, 300);
+            }, 2000);
           });
 
           const bars1 = document.querySelectorAll(".skill-code");
@@ -414,7 +401,7 @@
 
             setTimeout(() => {
               fill.style.width = level + "%";
-            }, 300);
+            }, 2000);
           });
         });
       </script>
