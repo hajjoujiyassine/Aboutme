@@ -191,6 +191,46 @@
         border: #00aaf0 1px solid;
       }
 
+      .lange-hover {
+        height: 140px;
+        width: 80%;
+        position: absolute;
+        top: 310px;
+        color: #00aaf000;
+      }
+
+      .lange-hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: ShowRight 1s ease forwards;
+        animation-delay: 1s;
+      }
+
+      .code-hover {
+        height: 205px;
+        width: 80%;
+        position: absolute;
+        top: 500px;
+        color: #00aaf000;
+      }
+
+      .code-hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #081b29;
+        animation: ShowRight 1s ease forwards;
+        animation-delay: 1s;
+      }
+
       .skill-lange::before {
         content: attr(data-skill) " - " attr(data-level) "%";
         position: absolute;
@@ -199,8 +239,8 @@
         transform: translateY(-50%);
         z-index: 2;
         font-size: 20px;
-        color: white;
-        font-weight: 500;
+        color: #081b29;
+        font-weight: 700;
       }
 
       .about-code {
@@ -235,8 +275,8 @@
         transform: translateY(-50%);
         z-index: 2;
         font-size: 20px;
-        color: white;
-        font-weight: 500;
+        color: #081b29;
+        font-weight: 700;
       }
 
       .skill-fill {
@@ -353,6 +393,7 @@
         <div class="skill-lange" data-skill="Français" data-level="75"></div>
         <div class="skill-lange" data-skill="Arabe" data-level="95"></div>
         <div class="skill-lange" data-skill="Anglais" data-level="70"></div>
+        <div class="lange-hover">hover</div>
       </section>
 
       <section class="about-code">
@@ -362,6 +403,7 @@
         <div class="skill-code" data-skill="CSS" data-level="85"></div>
         <div class="skill-code" data-skill="JavaScript" data-level="65"></div>
         <div class="skill-code" data-skill="GitHub" data-level="85"></div>
+         <div class="code-hover">hover</div>
       </section>
 
       <section class="about-permi">
